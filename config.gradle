@@ -1,9 +1,9 @@
 apply plugin: 'maven'
 
+// Use 'wagon-git' to upload our artifact to the maven repository
 configurations {
     deployerJar
 }
-
 
 repositories {
     jcenter()
@@ -12,10 +12,12 @@ repositories {
     }
 }
 
-
 dependencies {
     deployerJar "ar.com.synergian:wagon-git:0.2.5"
 }
+
+
+// generate JAR file for the library, if you also need the jar file, you can uncomment these.
 
 //task androidJavadocs(type: Javadoc) {
 //    failOnError false
