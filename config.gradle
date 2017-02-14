@@ -1,0 +1,56 @@
+apply plugin: 'maven'
+
+configurations {
+    deployerJar
+}
+
+
+repositories {
+    jcenter()
+    maven {
+        url "https://raw.github.com/synergian/wagon-git/releases"
+    }
+}
+
+
+dependencies {
+    deployerJar "ar.com.synergian:wagon-git:0.2.5"
+}
+
+//task androidJavadocs(type: Javadoc) {
+//    failOnError false
+//    source = android.sourceSets.main.java.sourceFiles
+//}
+//
+//task androidSourcesJar(type: Jar) {
+//    classifier = 'sources'
+//    from android.sourceSets.main.java.sourceFiles
+//}
+//
+//task androidJavadocsJar(type: Jar, dependsOn: androidJavadocs) {
+//    classifier = 'javadoc'
+//    from androidJavadocs.destinationDir
+//}
+//
+//artifacts {
+//    archives androidSourcesJar
+//    archives androidJavadocsJar
+//}
+
+uploadArchives {
+    repositories.mavenDeployer {
+        configuration = configurations.deployerJar
+        repository(url: 'git:releases://git@bitbucket.org:' + COMPANY + '/' + REPOSITORY_NAME + '.git') {
+            authentication(userName: USERNAME, password: PASSWORD)
+        }
+
+        pom.project {
+            groupId = ARTIFACT_PACKAGE
+            version = ARTIFACT_VERSION
+            artifactId = ARTIFACT_NAME
+            packaging ARTIFACT_PACKAGING
+        }
+    }
+}
+
+
