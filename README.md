@@ -152,9 +152,10 @@ PASSWORD=Bitbucket_password
 *NOTICE:* **DO NOT upload this file to the remote repository for the sake of security of your account**
 
 ###Special thanks:
-During the exploration of using Bitbucket repository to host artifact, the following articles helped a lot.
-[GIT AS A SECURE PRIVATE MAVEN REPOSITORY](http://jeroenmols.com/blog/2016/02/05/wagongit/)
-[how-to-publish-an-android-library-as-a-maven-artifact-on-bitbucket](http://stackoverflow.com/questions/33812099/how-to-publish-an-android-library-as-a-maven-artifact-on-bitbucket)
+During the exploration of using Bitbucket repository to host artifact, the following articles helped a lot.<br>
+[Git as a secure private maven repository](http://jeroenmols.com/blog/2016/02/05/wagongit/)<br>
+[how-to-publish-an-android-library-as-a-maven-artifact-on-bitbucket](http://stackoverflow.com/questions/33812099/how-to-publish-an-android-library-as-a-maven-artifact-on-bitbucket)<br>
+[how to write README with markdown](http://georgeosddev.github.io/markdown-edit/)
 
 
 ####**Thank you for reading this article, feel free to contect me if you have encountered any issue. ^^**
